@@ -1,0 +1,49 @@
+{
+    "name": "pdavila13/users",
+    "type": "library",
+    "description": "Package Users",
+    "keywords": [
+        "pdavila13",
+        "users"
+    ],
+    "homepage": "https://github.com/pdavila13/users",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paolo Dávila",
+            "email": "info@paolodavila.com",
+            "homepage": "https://paolodavila.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "pdavila13\\users\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "pdavila13\\users\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
